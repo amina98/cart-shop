@@ -2,12 +2,10 @@ import React from "react";
 import { useContext } from "react";
 
 //context
-import { CartContext } from "../../context/CartContextProvider";
+import { CartContext } from "../context/CartContextProvider";
 
 //functions
-import { shorten } from "../../helper/functhens";
-//icons
-import trashIcon from "../../assets/icon/trash.svg";
+import { shorten } from "../helper/functhens";
 
 const Cart = (props) => {
     const { dispatch } = useContext(CartContext);
@@ -31,7 +29,7 @@ const Cart = (props) => {
                 <div className="d-flex">
                     {quantity > 1 ? (
                         <button
-                            className="btn btn-primary"
+                            className="btn btn-secondary"
                             onClick={() =>
                                 dispatch({
                                     type: "DECREASE",
@@ -43,7 +41,7 @@ const Cart = (props) => {
                         </button>
                     ) : (
                         <button
-                            className="btn btn-primary"
+                            className="btn btn-danger"
                             onClick={() =>
                                 dispatch({
                                     type: "REMOVE_ITEM",

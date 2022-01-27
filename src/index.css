@@ -1,19 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-        "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     box-sizing: border-box;
 }
-
+* {
+    font-family: "Poppins", sans-serif;
+}
 /* .card:hover {
     box-shadow: 0 15px 10px -10px rgba(31, 31, 31, 0.5);
   } */
 .card:hover {
-    box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
     z-index: 100;
-    transition: all 0.5s ease;
-    transform: scale(101%);
+    transition: all 0.3s ease;
+    transform: scale(100.5%);
+}
+.slick-next::before,
+.slick-prev::before {
+    color: unset !important;
+    font-size: 50px !important;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+@keyframes ldio-dpu1y2up98i-o {
+    0% {
+        opacity: 1;
+        transform: translate(0 0);
+    }
+    49.99% {
+        opacity: 1;
+        transform: translate(74.80000000000001px, 0);
+    }
+    50% {
+        opacity: 0;
+        transform: translate(74.80000000000001px, 0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(0, 0);
+    }
+}
+@keyframes ldio-dpu1y2up98i {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(74.80000000000001px, 0);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+.ldio-dpu1y2up98i div {
+    position: absolute;
+    width: 74.80000000000001px;
+    height: 74.80000000000001px;
+    border-radius: 50%;
+    top: 56.1px;
+    left: 18.700000000000003px;
+}
+.ldio-dpu1y2up98i div:nth-child(1) {
+    background: #008fd4;
+    animation: ldio-dpu1y2up98i 1.4925373134328357s linear infinite;
+    animation-delay: -0.7462686567164178s;
+}
+.ldio-dpu1y2up98i div:nth-child(2) {
+    background: #001f2d;
+    animation: ldio-dpu1y2up98i 1.4925373134328357s linear infinite;
+    animation-delay: 0s;
+}
+.ldio-dpu1y2up98i div:nth-child(3) {
+    background: #008fd4;
+    animation: ldio-dpu1y2up98i-o 1.4925373134328357s linear infinite;
+    animation-delay: -0.7462686567164178s;
+}
+.loadingio-spinner-dual-ball-vgf8tsobm28 {
+    width: 187px;
+    height: 187px;
+    display: inline-block;
+    overflow: hidden;
+    background: none;
+}
+.ldio-dpu1y2up98i {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0; /* see note above */
+}
+.ldio-dpu1y2up98i div {
+    box-sizing: content-box;
 }

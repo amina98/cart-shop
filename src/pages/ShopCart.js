@@ -1,13 +1,16 @@
 import React from "react";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+import { notify } from "react-notify-toast";
 
 //context
 import { CartContext } from "../context/CartContextProvider";
 // components
-import Cart from "./shared/Cart";
+import Cart from "../components/Cart";
 
 const ShopCart = () => {
+    const history = useHistory();
     const { state, dispatch } = useContext(CartContext);
     return (
         <div className="min-vh-100 bg-light">
@@ -44,9 +47,18 @@ const ShopCart = () => {
                                     </button>
                                     <button
                                         className="btn btn-success"
-                                        onClick={() =>
-                                            dispatch({ type: "CHECKOUT" })
-                                        }
+                                        onClick={() => {
+                                            if (state.token !== "") {
+                                                dispatch({ type: "CHECKOUT" });
+                                            } else {
+                                                history.push("/auth");
+                                                notify.show(
+                                                    "You must log in before checkout",
+                                                    "warning",
+                                                    2000
+                                                );
+                                            }
+                                        }}
                                     >
                                         check out
                                     </button>
