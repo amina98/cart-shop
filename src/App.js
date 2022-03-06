@@ -12,7 +12,7 @@ import "slick-carousel/slick/slick-theme.css";
 //Components
 import Store from "./pages/Store";
 import ProductDetails from "./pages/ProductDetails";
-import Navbar from "./components/shared/Navbar";
+import Header from "./components/shared/Header";
 import ShopCart from "./pages/ShopCart";
 import Footer from "./components/shared/Footer";
 import Home from "./pages/Home";
@@ -23,7 +23,7 @@ function App() {
         <ProductContextProvider>
             <CartContextProvider>
                 <Notifications />
-                <Navbar />
+                <Header />
                 <Switch>
                     <Route path="/auth" component={Auth} />
                     <Route path="/regester" component={Regester} />
